@@ -58,8 +58,8 @@ CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://react-django-auth.onrender.com/",
-    "https://react-django-authentication-client.vercel.app/"
+    "https://react-django-auth.onrender.com",
+    "https://react-django-authentication-client.vercel.app"
 ]
 
 
