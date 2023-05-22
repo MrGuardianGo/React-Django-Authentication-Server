@@ -31,8 +31,8 @@ ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['*']
 
 INSTALLED_APPS = [
-    'rest_framework',
     'corsheaders',
+    'rest_framework',
     'core',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,22 +52,25 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SESSION_COOKIE_DOMAIN = '.onrender.com'
+SESSION_COOKIE_DOMAIN = '.vercel.app'
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
-
-CORS_ALLOWED_ORIGINS = [
-    "https://react-django-auth.onrender.com",
-    "https://react-django-authentication-client.vercel.app"
-]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"(?:\b\w+\.)+vercel\.app(?:\/\w+)*",
-    r"(?:\b\w+\.)+vercel\.app(?:\/\w+)*",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://react-django-auth.onrender.com",
+#     "https://react-django-authentication-client.vercel.app"
+# ]
+
+
+# CORS_ALLOWED_ORIGIN_REGEXES = [
+#     r"(?:\b\w+\.)+onrender(?:\/\w+)*",
+#     r"(?:\b\w+\.)+vercel\.app(?:\/\w+)*",
+# ]
 
 
 ROOT_URLCONF = 'server.urls'
