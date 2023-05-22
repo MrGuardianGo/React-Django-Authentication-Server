@@ -58,7 +58,7 @@ CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://\w+\.onrender\.com$",
+    r"^https://\w+\.vercel\.app$",
     r"^http://\w+\.onrender\.com$",
 ]
 
